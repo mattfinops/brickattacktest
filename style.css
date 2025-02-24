@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+body {
+    font-family: 'Exo 2', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #4361ee;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.score-container, .lives-container {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(67, 97, 238, 0.7);
+}
+
+.powerup-display {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffbe0b;
+    min-width: 150px;
+    text-shadow: 0 0 10px rgba(255, 190, 11, 0.7);
+}
+
+canvas {
+    border: 2px solid #4361ee;
+    border-radius: 8px;
+    background-color: #0a0a1a;
+    box-shadow: 0 0 20px rgba(67, 97, 238, 0.5);
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Exo 2', Arial, sans-serif;
+    background: linear-gradient(to bottom, #4361ee, #3f37c9);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #4895ef, #4361ee);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#pauseButton {
+    background: linear-gradient(to bottom, #2196F3, #1976D2);
+}
+
+#pauseButton:hover {
+    background: linear-gradient(to bottom, #42A5F5, #2196F3);
+}
+
+#restartButton {
+    background: linear-gradient(to bottom, #f44336, #d32f2f);
+}
+
+#restartButton:hover {
+    background: linear-gradient(to bottom, #ef5350, #e53935);
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(67, 97, 238, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(67, 97, 238, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(67, 97, 238, 0.5); }
+}
+
+canvas {
+    animation: glow 3s infinite;
+}
